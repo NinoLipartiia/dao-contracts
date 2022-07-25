@@ -11,7 +11,7 @@ use cw_multi_test::{next_block, App, Contract, ContractWrapper, Executor};
 use cw_core::{msg::ModuleInstantiateInfo, state::ProposalModule};
 use cw_storage_plus::Map;
 use cw_utils::Duration;
-use cw_utils::{Duration, Expiration};
+use cw_utils::Expiration;
 
 use indexable_hooks::HooksResponse;
 
