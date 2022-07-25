@@ -2223,6 +2223,9 @@ fn test_migrate_from_beta() {
     // Write to storage in old proposal module format
     let key = Addr::unchecked("addr");
     let path = PROPOSAL_MODULES.key(key);
+    let stren = String::from_utf8((&path).to_vec()).unwrap();
+    println!("path {}", stren);
+
     deps.storage.set(&path, &to_binary(&Empty {}).unwrap());
 
     // Migrate to new data format

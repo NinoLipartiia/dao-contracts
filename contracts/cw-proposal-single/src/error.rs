@@ -65,4 +65,10 @@ pub enum ContractError {
 
     #[error("Min voting period must be less than or equal to max voting period")]
     InvalidMinVotingPeriod {},
+
+    #[error("Migrated map size {{}} and original map size {{}} are different")]
+    MapCountsDiffer {
+        migrated_size: usize,
+        original_size: usize,
+    },
 }
