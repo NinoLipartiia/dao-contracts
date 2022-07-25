@@ -30,7 +30,7 @@ use crate::{
     msg::{ExecuteMsg, InstantiateMsg, MigrateMsg, QueryMsg},
     proposal::SingleChoiceProposal,
     query::{ProposalListResponse, ProposalResponse, VoteInfo, VoteResponse},
-    state::{Config, PROPOSALS},
+    state::Config,
     ContractError,
 };
 

@@ -1,8 +1,8 @@
 #[cfg(not(feature = "library"))]
 use cosmwasm_std::entry_point;
 use cosmwasm_std::{
-    from_binary, from_slice, to_binary, to_vec, Addr, Binary, CosmosMsg, Deps, DepsMut, Empty, Env,
-    MessageInfo, Order, Reply, Response, StdError, StdResult, Storage, Uint128, WasmMsg,
+    to_binary, Addr, Binary, CosmosMsg, Deps, DepsMut, Empty, Env, MessageInfo, Order, Reply,
+    Response, StdResult, Storage, Uint128, WasmMsg,
 };
 use cw2::set_contract_version;
 use cw_core_interface::voting::IsActiveResponse;
