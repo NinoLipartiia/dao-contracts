@@ -4285,4 +4285,10 @@ fn test_migrate_from_beta() {
     assert_eq!(migrated_proposal.0, 0);
     assert_eq!(migrated_proposal.1.created, env.block.time);
     assert_eq!(migrated_proposal.1.last_updated, env.block.time);
+
+    // ensure old map items have been removed
+    let old_map_count = beta_map
+        .keys_raw(&deps.storage, None, None, Order::Ascending)
+        .count();
+    assert_eq!(0, old_map_count);
 }
